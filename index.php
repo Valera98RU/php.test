@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Тестовое задание</title>  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script>
 
@@ -74,7 +76,7 @@
                          
             $.each(json_object.body,function(index){
                 html_table+="<tr>";
-                    html_table+="<td>";
+                    html_table+="<td scope='row'>";
                         html_table+="<a class='editPersan' id="+json_object.body[index].id+" href='#' >"+json_object.body[index].name+"</a>";
                     html_table+="</td>";
                     html_table+="<td>";
@@ -177,13 +179,13 @@
             <input type="text" name="search_string" id="search_string">
             <button onclick="getListInfo(1)">Поиск</button>
         </div>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
-                    <th>ФИО</th>
-                    <th>Должность</th>
-                    <th>Дата трудоустройства</th>
-                    <th>Работает/Уволен</th>
+                    <th scope="col">ФИО</th>
+                    <th scope="col">Должность</th>
+                    <th scope="col">Дата трудоустройства</th>
+                    <th scope="col">Работает/Уволен</th>
                 </tr>
             </thead>
             <tbody id="table-body">
@@ -193,7 +195,7 @@
         <div id="scrollTable"> 
         
          </div>
-        <div id="loadcontent">
+        <div id="loadcontent" class = "card">
         </div>
     </body>
 

@@ -16,12 +16,12 @@ $positionList = $position->getPOsitionList();
 
 
 ?>  
-<div id="editForm" class="form-popup">
+<div id="editForm" class="form-popup card-body" >
     
         <table>
-            <button onclick="closeForm()"> Закрыть</button>
+            <button onclick="closeForm()" class="btn btn-primary"> X</button>
             <tr>
-                <td>ФИО</td>
+                <td><label for="#name"> ФИО</label></td>
                 <td><input type="text" value = "<? echo $employeer["name"]?>" name="name" id="name"></td>
             </tr>
             <tr>
@@ -56,7 +56,7 @@ $positionList = $position->getPOsitionList();
                      ?>></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="button" value="save" class="save-button" name="save" id="<?echo $_SESSION["id"];?>" onclick="savePerson()"></td>
+                <td colspan="2"><input type="button" value="save" class="btn btn-primary" name="save" id="<?echo $_SESSION["id"];?>" onclick="savePerson()"></td>
             </tr>
         </table>
         
